@@ -1,0 +1,28 @@
+name: Build Test
+
+on:
+  push:
+    branches: [ development ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Linux Test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      package: write
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-java@v3
+      with:
+        java-version: '8'
+        distribution: 'adopt'
+    - name: Build Jar File
+      run: |
+        cd src
+        bash run.sh -a
+    - name: Publish package 
+      run: mvn --batch-mode deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
