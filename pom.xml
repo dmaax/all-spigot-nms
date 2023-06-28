@@ -5,7 +5,7 @@
 
     <groupId>com.github.dmaax</groupId>
     <artifactId>all-spigot-nms</artifactId>
-    <version>LATEST</version>
+    <version>1.20.1</version>
 
     <distributionManagement>
         <repository>
@@ -35,7 +35,7 @@
                         </goals>
                         <configuration>
                             <sourceFile>pom.xml</sourceFile>
-                            <destinationFile>extracted_files/all-spigot-nms-LATEST.pom</destinationFile>
+                            <destinationFile>extracted_files/all-spigot-nms-1.20.1.pom</destinationFile>
                         </configuration>
                     </execution>
                 </executions>
