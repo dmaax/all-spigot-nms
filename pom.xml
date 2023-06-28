@@ -6,7 +6,6 @@
     <groupId>com.github.dmaax</groupId>
     <artifactId>all-spigot-nms</artifactId>
     <version>LATEST</version>
-    <packaging>pom</packaging>
 
     <distributionManagement>
         <repository>
